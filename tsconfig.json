@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@utils/*": ["./utils/*"] 
+    }
+  }
+}
