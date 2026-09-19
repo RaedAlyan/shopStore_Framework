@@ -3,6 +3,7 @@
     "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "esModuleInterop": true,
     "noEmit": true,
     "paths": {
       "@pages/*": ["./pages/*"],
