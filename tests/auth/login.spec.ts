@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test';
-import {LoginPage} from '../../pages/loginPage.ts';
+import {LoginPage} from '@pages/loginPage.ts';
 
 test.describe('Login Page Suite', () => {
 

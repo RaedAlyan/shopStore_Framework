@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
-import {SignupPage} from '../../pages/signupPage.ts';
-import {FakeData} from '../../utils/fakeData.ts';
+import {SignupPage} from '@pages/signupPage.ts';
+import {FakeData} from '@utils/fakeData.ts';
 
 test.describe('Signup Page Suite', () => {
 
