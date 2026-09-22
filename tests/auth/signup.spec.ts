@@ -1,13 +1,9 @@
-import {test, expect} from '@playwright/test';
-import {SignupPage} from '@pages/signupPage.ts';
+import {test, expect} from '@fixtures/fixtures.ts';
 import {FakeData} from '@utils/fakeData.ts';
 
 test.describe('Signup Page Suite', () => {
 
-  let signupPage: SignupPage;
-
-  test.beforeEach(async ({ page }) => {
-    signupPage = new SignupPage(page);
+  test.beforeEach(async ({ signupPage }) => {
     await signupPage.goToSignupPage();
   });
 
@@ -15,7 +11,7 @@ test.describe('Signup Page Suite', () => {
     await expect(page).toHaveTitle(/Sign Up/);
   });
 
-  test('Signup with valid credentials', async ({ page }) => {
+  test('Signup with valid credentials', async ({ page, signupPage }) => {
     const user = FakeData.user();
     await signupPage.signup(user.fullName, user.email, user.password);
     await expect(page.getByTestId("nav-user-menu")).toContainText(user.firstName);
